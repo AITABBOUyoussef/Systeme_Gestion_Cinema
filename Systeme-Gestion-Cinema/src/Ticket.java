@@ -30,6 +30,6 @@ public class Ticket {
 
         @Override
         public String toString() {
-            return "Ticket{id=" + idTicket + ", prix=" + prix + ", spectateur=" + (spectateur!=null?spectateur.getNom():"null") + ", seance=" + (seance!=null?seance.getIdSeance():"null") + "}";
+            return "Ticket " + idTicket + " | " + prix + "DH | " + spectateur.getNom() + " | Séance " + seance.getIdSeance();
         }
 }

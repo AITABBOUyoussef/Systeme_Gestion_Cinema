@@ -12,10 +12,12 @@ public class Main {
         SpectateurManager manager = new SpectateurManager();
         manager.ajouterSpectateur("Ali", "ali@email.com");
         manager.ajouterSpectateur("Fatima", "fatima@email.com");
+        manager.ajouterSpectateur("Malak", "Malak@email.com");
 
 
         Ticket ticket1 = new Ticket(1, 50.0, manager.getSpectateurs().get(0), seance1);
         Ticket ticket2 = new Ticket(2, 45.0, manager.getSpectateurs().get(1), seance2);
+        Ticket ticket3 = new Ticket(3, 45.0, manager.getSpectateurs().get(2), seance2);
 
 
         System.out.println(film1);
@@ -24,5 +26,17 @@ public class Main {
         System.out.println(seance2);
         System.out.println(ticket1);
         System.out.println(ticket2);
+        System.out.println(ticket3);
+
+        seance1.ajouterTicket(ticket1);
+        seance2.ajouterTicket(ticket2);
+        seance2.ajouterTicket(ticket3);
+
+
+        System.out.println("Spectateurs dans séance 1: " + seance1.getNombreSpectateursInscrits());
+        System.out.println("Spectateurs dans séance 2: " + seance2.getNombreSpectateursInscrits());
+
+
+        manager.afficherSpectateurs();
     }
 }

@@ -51,6 +51,6 @@ public Film(int idFilm, String titre, int duree, String categorie) {
     }
     @Override
     public String toString() {
-        return "Film {id : " + idFilm + " , titre : " + titre + " , duree : " + duree + "min , categorie : " + categorie + "}";
+        return "Film     |id : " + idFilm + " , titre : " + titre + " , duree : " + duree + "min , categorie : " + categorie + "|";
     }
 }

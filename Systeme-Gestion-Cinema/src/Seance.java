@@ -38,13 +38,12 @@ public class Seance {
             System.out.println("Salle pleine!");
         }
     }
-    public String toString() {
 
-            return "Seance { id = " + idSeance + " , film = ' " + film.getTitre() + " ' , horaire = " + horaire + " , salle = ' " + salle + " ' , capacite = " + capaciteMax + " } ";
-
-    }
     public int getNombreSpectateursInscrits() {
         return tickets.size();
+    }
+    public String toString() {
+        return "Séance " + idSeance + " | " + film.getTitre() + " | " + horaire + " | " + salle + " | " + capaciteMax + " places";
     }
 
     }
