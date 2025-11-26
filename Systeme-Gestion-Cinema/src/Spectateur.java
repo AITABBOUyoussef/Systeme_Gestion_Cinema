@@ -16,29 +16,9 @@ public class Spectateur {
     public String getNom() { return nom; }
     public String getEmail() { return email; }
 
-    @Override
     public String toString() {
         return "Spectateur{id=" + idSpectateur + ", nom='" + nom + "', email='" + email + "'}";
     }
-
-
-
-
-
-
-
-        public void displaySpectateurs() {
-            System.out.println(" List of Spectateurs:");
-            if (spectateurs.isEmpty()) {
-                System.out.println("No spectators yet.");
-            } else {
-                for (Spectateur s : spectateurs) {
-                    System.out.println(s);
-                }
-            }
-        }
     }
 
 
-
-}

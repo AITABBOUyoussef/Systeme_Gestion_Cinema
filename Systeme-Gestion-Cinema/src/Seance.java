@@ -1,16 +1,16 @@
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Seance {
     private int idSeance;
-    private LocalDateTime horaire;
+    private LocalTime horaire;
     private String salle;
     private int capaciteMax;
     private Film film;
     private List<Ticket> tickets = new ArrayList<>();
 
-    public Seance(int idSeance, LocalDateTime horaire, String salle, int capaciteMax, Film film) {
+    public Seance(int idSeance, LocalTime horaire, String salle, int capaciteMax, Film film) {
         this.idSeance = idSeance;
         this.horaire = horaire;
         this.salle = salle;
@@ -20,8 +20,8 @@ public class Seance {
 
     public int getIdSeance() { return idSeance; }
     public void setIdSeance(int idSeance) { this.idSeance = idSeance; }
-    public LocalDateTime getHoraire() { return horaire; }
-    public void setHoraire(LocalDateTime horaire) { this.horaire = horaire; }
+    public LocalTime getHoraire() { return horaire; }
+    public void setHoraire(LocalTime horaire) { this.horaire = horaire; }
     public String getSalle() { return salle; }
     public void setSalle(String salle) { this.salle = salle; }
     public int getCapaciteMax() { return capaciteMax; }
@@ -38,11 +38,13 @@ public class Seance {
             System.out.println("Salle pleine!");
         }
     }
-
     public String toString() {
-        return "Seance{id=" + idSeance + ", film='" + film.getTitre() + "', horaire=" + horaire + ", salle='" + salle + "', capacite=" + capaciteMax + "}";
+
+            return "Seance { id = " + idSeance + " , film = ' " + film.getTitre() + " ' , horaire = " + horaire + " , salle = ' " + salle + " ' , capacite = " + capaciteMax + " } ";
+
     }
     public int getNombreSpectateursInscrits() {
         return tickets.size();
     }
+
     }
