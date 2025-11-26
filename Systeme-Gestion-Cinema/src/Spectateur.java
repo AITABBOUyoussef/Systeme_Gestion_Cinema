@@ -29,7 +29,7 @@ public class Spectateur {
         public void addSpectateur(String nom, String email) {
             Spectateur s = new Spectateur(nextId++, nom, email);
             spectateurs.add(s);
-            System.out.println("✅ Spectateur added: " + s.getNom());
+            System.out.println(" Spectateur added: " + s.getNom());
         }
 
 
@@ -47,7 +47,7 @@ public class Spectateur {
 
 
         public void displaySpectateurs() {
-            System.out.println("👥 List of Spectateurs:");
+            System.out.println(" List of Spectateurs:");
             if (spectateurs.isEmpty()) {
                 System.out.println("No spectators yet.");
             } else {
