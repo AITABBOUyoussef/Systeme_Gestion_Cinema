@@ -1,3 +1,5 @@
+import spectator.Spectateur;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +31,6 @@ public class Seance {
     public int getCapaciteMax() { return capaciteMax; }
     public void setCapaciteMax(int capaciteMax) { this.capaciteMax = capaciteMax; }
     public Film getFilm() { return film; }
-    public void setFilm(Film film) { this.film = film; }
 
     public List<Spectateur> getSpectateursInscrits() { return spectateursInscrits; }
 
