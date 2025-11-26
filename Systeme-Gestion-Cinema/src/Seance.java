@@ -8,7 +8,7 @@ public class Seance {
     private String salle;
     private int capaciteMax;
     private Film film;
-    private List<Spectateur> spectateursInscrits = new ArrayList<>();
+    private List<Ticket> tickets = new ArrayList<>();
 
     public Seance(int idSeance, LocalDateTime horaire, String salle, int capaciteMax, Film film) {
         this.idSeance = idSeance;
@@ -28,10 +28,21 @@ public class Seance {
     public void setCapaciteMax(int capaciteMax) { this.capaciteMax = capaciteMax; }
     public Film getFilm() { return film; }
 
-    public List<Spectateur> getSpectateursInscrits() { return spectateursInscrits; }
+    public List<Ticket> getTickets() { return tickets; }
 
-    @Override
-    public String toString() {
-        return "Seance{id=" + idSeance + ", horaire=" + horaire + ", salle='" + salle + "', capacite=" + capaciteMax + ", film=" + (film!=null?film.getTitre():"null") + "}";
+    public void ajouterTicket(Ticket ticket) {
+        if (tickets.size() < capaciteMax) {
+            this.tickets.add(ticket);
+            System.out.println("Ticket ajouté pour la séance");
+        } else {
+            System.out.println("Salle pleine!");
+        }
     }
-}
+
+    public String toString() {
+        return "Seance{id=" + idSeance + ", film='" + film.getTitre() + "', horaire=" + horaire + ", salle='" + salle + "', capacite=" + capaciteMax + "}";
+    }
+    public int getNombreSpectateursInscrits() {
+        return tickets.size();
+    }
+    }

@@ -3,12 +3,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Spectateur {
-    private int id;
+    private int idSpectateur;
     private String nom;
     private String email;
 
-    public Spectateur(int id, String nom, String email) {
-        this.id = id;
+    public Spectateur(int idSpectateur, String nom, String email) {
+        this.idSpectateur = idSpectateur;
         this.nom = nom;
         this.email = email;
     }
@@ -18,32 +18,13 @@ public class Spectateur {
 
     @Override
     public String toString() {
-        return "Spectateur{id=" + id + ", nom='" + nom + "', email='" + email + "'}";
+        return "Spectateur{id=" + idSpectateur + ", nom='" + nom + "', email='" + email + "'}";
     }
 
-    static class SpectateurManager {
-        private List<Spectateur> spectateurs = new ArrayList<>();
-        private int nextId = 1; // auto-increment ID
 
 
-        public void addSpectateur(String nom, String email) {
-            Spectateur s = new Spectateur(nextId++, nom, email);
-            spectateurs.add(s);
-            System.out.println(" Spectateur added: " + s.getNom());
-        }
 
 
-        public void addSpectateurFromInput() {
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.print("Enter spectator name: ");
-            String nom = scanner.nextLine();
-
-            System.out.print("Enter spectator email: ");
-            String email = scanner.nextLine();
-
-            addSpectateur(nom, email);
-        }
 
 
         public void displaySpectateurs() {
