@@ -13,12 +13,6 @@ public class Ticket {
             this.seance = seance;
         }
 
-        public Ticket(double prix, Spectateur spectateur, Seance seance) {
-            this.prix = prix;
-            this.spectateur = spectateur;
-            this.seance = seance;
-        }
-
         public int getIdTicket() { return idTicket; }
         public void setIdTicket(int idTicket) { this.idTicket = idTicket; }
         public double getPrix() { return prix; }

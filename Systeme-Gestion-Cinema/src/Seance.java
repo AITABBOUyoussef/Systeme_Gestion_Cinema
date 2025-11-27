@@ -33,7 +33,7 @@ public class Seance {
     public void ajouterTicket(Ticket ticket) {
         if (tickets.size() < capaciteMax) {
             this.tickets.add(ticket);
-            System.out.println("Ticket ajouté pour la séance");
+            System.out.println("Ticket "+ tickets.getFirst().getIdTicket() +" ajouté pour la séance"+idSeance);
         } else {
             System.out.println("Salle pleine!");
         }
