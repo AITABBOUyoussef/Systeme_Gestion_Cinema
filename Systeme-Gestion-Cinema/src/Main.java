@@ -8,7 +8,7 @@ public class Main {
         Film film3 = new Film(3, "Inception", 210, "Sci-Fi");
 
         Seance seance1 = new Seance(1, LocalTime.of(18,30)  , "Salle 1", 100, film1);
-        Seance seance2 = new Seance(2, LocalTime.of(22,00), "Salle 2", 80, film2);
+        Seance seance2 = new Seance(2, LocalTime.of(22,00), "Salle 2", 100, film2);
         Seance seance3 = new Seance(3, LocalTime.of(15,20), "Salle 3", 160, film3);
 
         SpectateurManager manager = new SpectateurManager();
@@ -28,16 +28,21 @@ public class Main {
         System.out.println(film2);
         System.out.println(film3);
         System.out.println(seance1);
+
         System.out.println(seance2);
         System.out.println(seance3);
         System.out.println(ticket1);
+        seance1.ajouterTicket(ticket1);
         System.out.println(ticket2);
+        seance2.ajouterTicket(ticket2);
+
         System.out.println(ticket3);
+        seance2.ajouterTicket(ticket3);
         System.out.println(ticket4);
 
-        seance1.ajouterTicket(ticket1);
-        seance2.ajouterTicket(ticket2);
-        seance2.ajouterTicket(ticket3);
+
+
+
         seance3.ajouterTicket(ticket4);
 
 
