@@ -11,6 +11,6 @@ public class Spectateur {
 
     @Override
     public String toString() {
-        return "[" + id + "] " + nom + " - " + email;
+        return "// [" + id + "] " + nom + " - " + email;
     }
 }

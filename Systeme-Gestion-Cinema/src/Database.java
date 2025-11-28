@@ -2,9 +2,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Database {
-    static final String URL = "jdbc:mysql://127.0.0.1:3306/CINEMA?useSSL=false&serverTimezone=UTC";
+    static final String URL = "jdbc:mysql://127.0.0.1:3306/CINEMA";
     static final String USER = "root";
-    static final String PASSWORD = "password";
+    static final String PASSWORD = "";
 
     public static Connection getConnection() {
         try {

@@ -35,7 +35,7 @@ CREATE TABLE ticket (
 );
 
 INSERT INTO film(titre, duree, categorie) VALUES
-('Avengers: Endgame', 181, 'Action'),
+('Avengers: Endgame', 181, 'Action' ),
 ('Inception', 148, 'Science Fiction'),
 ('La La Land', 128, 'Musical'),
 ('The Godfather', 175, 'Crime'),

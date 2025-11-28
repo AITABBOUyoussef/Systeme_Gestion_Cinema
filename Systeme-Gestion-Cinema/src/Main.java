@@ -7,19 +7,22 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("\n==== CINEMA SYSTEM ====");
-            System.out.println("1. Ajouter un film");
-            System.out.println("2. Ajouter un spectateur");
-            System.out.println("3. Ajouter une séance");
-            System.out.println("4. Acheter un ticket");
-            System.out.println("5. Afficher films");
-            System.out.println("6. Afficher spectateurs");
-            System.out.println("7. Afficher séances");
-            System.out.println("8. Afficher tickets");
-            System.out.println("0. Quitter");
+            System.out.println("\n||=============================||");
+            System.out.println("||====== CINEMA SYSTEM ========||");
+            System.out.println("|| 1. Ajouter un film          ||");
+            System.out.println("|| 2. Ajouter un spectateur    ||");
+            System.out.println("|| 3. Ajouter une séance       ||");
+            System.out.println("|| 4. Acheter un ticket        ||");
+            System.out.println("|| 5. Afficher films           ||");
+            System.out.println("|| 6. Afficher spectateurs     ||");
+            System.out.println("|| 7. Afficher séances         ||");
+            System.out.println("|| 8. Afficher tickets         ||");
+            System.out.println("|| 0. Quitter                  ||");
+            System.out.println("||=============================||");
             System.out.print("Choix: ");
 
             int choix = Integer.parseInt(sc.nextLine());
@@ -57,7 +60,7 @@ public class Main {
             ps.setInt(2, duree);
             ps.setString(3, categorie);
             ps.executeUpdate();
-            System.out.println("Film ajouté !");
+            System.out.println("Film ajouté ");
         } catch (Exception e) {
             System.out.println("Erreur: " + e.getMessage());
         }
@@ -67,8 +70,8 @@ public class Main {
         try (Connection conn = Database.getConnection()) {
             ResultSet rs = conn.createStatement()
                     .executeQuery("SELECT * FROM film");
-
-            System.out.println("\n--- FILMS ---");
+            System.out.println("\n//////////////////////////////////////////");
+            System.out.println("//---------------[ FILMS ]----------------");
             while (rs.next()) {
                 System.out.println(
                         new Film(
@@ -79,6 +82,8 @@ public class Main {
                         )
                 );
             }
+            System.out.println("//////////////////////////////////////////");
+
         } catch (Exception e) {
             System.out.println("Erreur: " + e.getMessage());
         }
@@ -108,8 +113,8 @@ public class Main {
         try (Connection conn = Database.getConnection()) {
             ResultSet rs = conn.createStatement()
                     .executeQuery("SELECT * FROM spectateur");
-
-            System.out.println("\n--- SPECTATEURS ---");
+            System.out.println("\n/////////////////////////////////////////////");
+            System.out.println("//--------------[ SPECTATEURS ]--------------");
             while (rs.next()) {
                 System.out.println(
                         new Spectateur(
@@ -119,6 +124,8 @@ public class Main {
                         )
                 );
             }
+            System.out.println("/////////////////////////////////////////////");
+
         } catch (Exception e) {
             System.out.println("Erreur: " + e.getMessage());
         }
@@ -160,8 +167,9 @@ public class Main {
         try (Connection conn = Database.getConnection()) {
             ResultSet rs = conn.createStatement()
                     .executeQuery("SELECT * FROM seance");
+            System.out.println("\n//////////////////////////////////////////////////////////////////");
 
-            System.out.println("\n--- SEANCES ---");
+            System.out.println("//---------------------------[ SEANCES ]--------------------------");
             while (rs.next()) {
                 System.out.println(
                         new Seance(
@@ -174,6 +182,8 @@ public class Main {
                         )
                 );
             }
+            System.out.println("//////////////////////////////////////////////////////////////////");
+
         } catch (Exception e) {
             System.out.println("Erreur: " + e.getMessage());
         }
@@ -208,8 +218,9 @@ public class Main {
         try (Connection conn = Database.getConnection()) {
             ResultSet rs = conn.createStatement()
                     .executeQuery("SELECT * FROM ticket");
+            System.out.println("\n//////////////////////////////////////////////////");
 
-            System.out.println("\n--- TICKETS ---");
+            System.out.println("//------------------[ TICKETS ]-------------------");
             while (rs.next()) {
                 System.out.println(
                         new Ticket(
@@ -220,6 +231,7 @@ public class Main {
                         )
                 );
             }
+            System.out.println("//////////////////////////////////////////////////");
         } catch (Exception e) {
             System.out.println("Erreur: " + e.getMessage());
         }

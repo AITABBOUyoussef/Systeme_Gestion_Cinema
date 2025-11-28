@@ -13,7 +13,7 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "[" + id + "] Spectateur: " + spectateurId
+        return "// [" + id + "] Spectateur: " + spectateurId
                 + " - Séance: " + seanceId
                 + " - Prix: " + prix + " dh";
     }

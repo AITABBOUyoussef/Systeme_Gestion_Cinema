@@ -11,8 +11,9 @@ public class Film {
         this.categorie = categorie;
     }
 
+
     @Override
     public String toString() {
-        return "[" + id + "] " + titre + " (" + duree + "min) - " + categorie;
+        return "// [" + id + "] " + titre + " (" + duree + "min) - " + categorie;
     }
 }

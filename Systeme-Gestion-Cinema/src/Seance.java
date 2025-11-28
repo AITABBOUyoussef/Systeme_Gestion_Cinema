@@ -17,7 +17,7 @@ public class Seance {
 
     @Override
     public String toString() {
-        return "[" + id + "] Film:" + idFilm
+        return "// [" + id + "] Film:" + idFilm
                 + " | " + date + " " + heure
                 + " | Salle:" + salle
                 + " | Capacité:" + capacite;
