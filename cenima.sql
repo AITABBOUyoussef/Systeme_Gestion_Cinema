@@ -17,12 +17,12 @@ CREATE TABLE spectateur (
 
 CREATE TABLE seance (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    film_id INT,
+    id_Film INT,
     date DATE,
     heure TIME,
     salle VARCHAR(20),
     capacite_max INT,
-    FOREIGN KEY (film_id) REFERENCES film(id)
+    FOREIGN KEY (id_Film) REFERENCES film(id)
 );
 
 CREATE TABLE ticket (
