@@ -1,14 +1,14 @@
 public class Seance {
     public int id;
-    public int filmId;
+    public int idFilm;
     public String date;
     public String heure;
     public String salle;
     public int capacite;
 
-    public Seance(int id, int filmId, String date, String heure, String salle, int capacite) {
+    public Seance(int id, int idFilm, String date, String heure, String salle, int capacite) {
         this.id = id;
-        this.filmId = filmId;
+        this.idFilm = idFilm;
         this.date = date;
         this.heure = heure;
         this.salle = salle;
@@ -17,7 +17,7 @@ public class Seance {
 
     @Override
     public String toString() {
-        return "[" + id + "] Film:" + filmId
+        return "[" + id + "] Film:" + idFilm
                 + " | " + date + " " + heure
                 + " | Salle:" + salle
                 + " | Capacité:" + capacite;
